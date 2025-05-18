@@ -31,6 +31,8 @@ mvn compile exec:java -Dexec.mainClass="com.example.demo.KafkaParallelConsumer" 
 
 ## Test Results
 
+Tests were run on an Apple M1 Max with 10 CPU cores.
+
 ### Parallel Consumer
 - Total time: 10.117 seconds
 - Throughput: 4,942.18 messages/second
@@ -74,25 +76,6 @@ mvn compile exec:java -Dexec.mainClass="com.example.demo.KafkaParallelConsumer" 
 - Apache Kafka Client
 - Confluent Parallel Consumer
 - SLF4J for logging
-
-## Project Structure
-
-```
-src/
-├── main/
-│   └── java/
-│       └── com/
-│           └── example/
-│               └── demo/
-│                   ├── App.java
-│                   └── KafkaParallelConsumer.java
-└── test/
-    └── java/
-        └── com/
-            └── example/
-                └── demo/
-                    └── AppTest.java
-```
 
 ## Kafka Consumer Features
 

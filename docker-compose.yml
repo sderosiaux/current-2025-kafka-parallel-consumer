@@ -1,3 +1,9 @@
+# Add this to: server.properties (on host)
+# listeners=PLAINTEXT://:9092,CONTROLLER://:9093,PLAINTEXT2://:9094
+# advertised.listeners=PLAINTEXT://localhost:9092,CONTROLLER://localhost:9093,PLAINTEXT2://host.docker.internal:9094
+# unstable.api.versions.enable=true
+# group.coordinator.rebalance.protocols=classic,consumer,share
+
 services:
   conduktor-console:
     image: conduktor/conduktor-console:1.34.0

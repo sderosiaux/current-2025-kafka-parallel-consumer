@@ -33,25 +33,22 @@ mvn compile exec:java -Dexec.mainClass="com.example.demo.KafkaParallelConsumer" 
 
 Tests were run on an Apple M1 Max with 10 CPU cores.
 
-### Parallel Consumer
-- Total time: 10.117 seconds
-- Throughput: 4,942.18 messages/second
-- Processing rate progression:
-  - 1,799.21 msgs/sec at 10K records
-  - 3,032.60 msgs/sec at 20K records
-  - 3,929.79 msgs/sec at 30K records
-  - 4,612.55 msgs/sec at 40K records
-  - 5,120.85 msgs/sec at 50K records
+### Performance Comparison
 
-### Normal Consumer
-- Total time: 197.623 seconds (about 3.3 minutes)
-- Throughput: 253.01 messages/second
-- Processing rate progression:
-  - 236.18 msgs/sec at 10K records
-  - 245.58 msgs/sec at 20K records
-  - 249.06 msgs/sec at 30K records
-  - 252.28 msgs/sec at 40K records
-  - 253.02 msgs/sec at 50K records
+| Metric | Parallel Consumer | Normal Consumer | Improvement |
+|--------|------------------|----------------|-------------|
+| Total Time | 10.117s | 197.623s | 19.5x faster |
+| Throughput | 4,942.18 msg/s | 253.01 msg/s | 19.5x higher |
+
+### Throughput Progression
+
+| Records Processed | Parallel Consumer (msg/s) | Normal Consumer (msg/s) |
+|-------------------|--------------------------|------------------------|
+| 10,000 | 1,799.21 | 236.18 |
+| 20,000 | 3,032.60 | 245.58 |
+| 30,000 | 3,929.79 | 249.06 |
+| 40,000 | 4,612.55 | 252.28 |
+| 50,000 | 5,120.85 | 253.02 |
 
 ## Key Findings
 
